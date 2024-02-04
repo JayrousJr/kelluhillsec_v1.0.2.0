@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesControler;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PagesControler::class,'home'])->name('home');
+Route::get('news', [PagesControler::class,'news'])->name('news');
+Route::get('contact', [PagesControler::class,'contact'])->name('contact');
+Route::get('about', [PagesControler::class,'about'])->name('about');
+Route::post('message-processor',[MessageController::class,'message'])->name('message');
 
 Route::middleware([
     'auth:sanctum',

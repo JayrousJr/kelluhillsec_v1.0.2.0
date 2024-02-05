@@ -18,6 +18,7 @@ Route::get('/', [PagesControler::class,'home'])->name('home');
 Route::get('news', [PagesControler::class,'news'])->name('news');
 Route::get('contact', [PagesControler::class,'contact'])->name('contact');
 Route::get('about', [PagesControler::class,'about'])->name('about');
+Route::get('9fa5fb587{newsData}0e215cb', [PagesControler::class,'oneNews'])->name('newsData');
 Route::post('message-processor',[MessageController::class,'message'])->name('message');
 
 Route::middleware([

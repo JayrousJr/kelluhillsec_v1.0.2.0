@@ -5,7 +5,7 @@
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
     <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="images/elements.jpg" data-speed="0.8"></div>
+        data-image-src="/storage/assets/images/elements.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -154,7 +154,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="tab_image">
-                                                    <img src="images/tab.jpg" alt="" />
+                                                    <img src="/storage/assets/images/tab.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -184,7 +184,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="tab_image">
-                                                    <img src="images/tab.jpg" alt="" />
+                                                    <img src="/storage/assets/images/tab.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -214,7 +214,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="tab_image">
-                                                    <img src="images/tab.jpg" alt="" />
+                                                    <img src="/storage/assets/images/tab.jpg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -259,14 +259,14 @@
     </div>
     <div class="milestones">
         <!-- Background image artis https://unsplash.com/@thepootphotographer -->
-        <div class="milestones_background" style="background-image: url(images/milestones.jpg)"></div>
+        <div class="milestones_background" style="background-image: url(/storage/assets/images/milestones.jpg)"></div>
         <div class="container">
             <div class="row milestones_container">
                 <!-- Milestone -->
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon">
-                            <img src="images/milestone_1.svg" alt="" />
+                            <img src="/storage/assets/images/milestone_1.svg" alt="" />
                         </div>
                         <div class="milestone_counter" data-end-value="1548">
                             0
@@ -279,7 +279,7 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon">
-                            <img src="images/milestone_2.svg" alt="" />
+                            <img src="/storage/assets/images/milestone_2.svg" alt="" />
                         </div>
                         <div class="milestone_counter" data-end-value="7286">
                             0
@@ -292,7 +292,7 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon">
-                            <img src="images/milestone_3.svg" alt="" />
+                            <img src="/storage/assets/images/milestone_3.svg" alt="" />
                         </div>
                         <div class="milestone_counter" data-end-value="257">
                             0
@@ -305,7 +305,7 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon">
-                            <img src="images/milestone_4.svg" alt="" />
+                            <img src="/storage/assets/images/milestone_4.svg" alt="" />
                         </div>
                         <div class="milestone_counter" data-end-value="39">
                             0
@@ -366,7 +366,7 @@
                     <div class="icon_box">
                         <div class="ib_title_container d-flex flex-row align-items-center justify-content-start">
                             <div class="ib_image">
-                                <img src="images/icon_1.png" alt="" />
+                                <img src="/storage/assets/images/icon_1.png" alt="" />
                             </div>
                             <div class="ib_title">Social Media Course</div>
                         </div>
@@ -384,7 +384,7 @@
                     <div class="icon_box">
                         <div class="ib_title_container d-flex flex-row align-items-center justify-content-start">
                             <div class="ib_image">
-                                <img src="images/icon_2.png" alt="" />
+                                <img src="/storage/assets/images/icon_2.png" alt="" />
                             </div>
                             <div class="ib_title">The Best Education</div>
                         </div>
@@ -402,7 +402,7 @@
                     <div class="icon_box">
                         <div class="ib_title_container d-flex flex-row align-items-center justify-content-start">
                             <div class="ib_image">
-                                <img src="images/icon_3.png" alt="" />
+                                <img src="/storage/assets/images/icon_3.png" alt="" />
                             </div>
                             <div class="ib_title">Only Certified Teachers</div>
                         </div>

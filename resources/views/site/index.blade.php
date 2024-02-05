@@ -9,7 +9,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/assets/images/bg-01.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(/storage/assets/images/bg-01.jpg)"></div>
                 <div class="home_container">
                     <div class="container">
                         <div class="row">
@@ -30,7 +30,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/assets/images/ab1.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(/storage/assets/images/ab1.jpg)"></div>
                 <div class="home_container">
                     <div class="container">
                         <div class="row">
@@ -51,7 +51,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/assets/images/ab4.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(/storage/assets/images/ab4.jpg)"></div>
                 <div class="home_container">
                     <div class="container">
                         <div class="row">
@@ -183,7 +183,7 @@
                                 <!-- News Post -->
                                 <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
                                     <div>
-                                        <div class="news_post_image"><img src="/assets/images/news_1.jpg"
+                                        <div class="news_post_image"><img src="/storage/assets/images/news_1.jpg"
                                                 alt="https://unsplash.com/@beccatapert"></div>
                                     </div>
                                     <div class="news_post_body">
@@ -197,7 +197,7 @@
                                 <!-- News Post -->
                                 <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
                                     <div>
-                                        <div class="news_post_image"><img src="/assets/images/news_2.jpg"
+                                        <div class="news_post_image"><img src="/storage/assets/images/news_2.jpg"
                                                 alt="https://unsplash.com/@nbb_photos"></div>
                                     </div>
                                     <div class="news_post_body">
@@ -211,7 +211,7 @@
                                 <!-- News Post -->
                                 <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
                                     <div>
-                                        <div class="news_post_image"><img src="/assets/images/news_3.jpg"
+                                        <div class="news_post_image"><img src="/storage/assets/images/news_3.jpg"
                                                 alt="https://unsplash.com/@rawpixel"></div>
                                     </div>
                                     <div class="news_post_body">
@@ -225,7 +225,7 @@
                                 <!-- News Post -->
                                 <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
                                     <div>
-                                        <div class="news_post_image"><img src="/assets/images/news_4.jpg"
+                                        <div class="news_post_image"><img src="/storage/assets/images/news_4.jpg"
                                                 alt="https://unsplash.com/@jtylernix"></div>
                                     </div>
                                     <div class="news_post_body">
@@ -269,7 +269,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_2.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_2.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -285,7 +285,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_5.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_5.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -302,7 +302,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_4.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_4.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -320,7 +320,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_3.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_3.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -338,7 +338,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_6.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_6.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -356,7 +356,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_7.jpg" alt=""></div>
+                                <div class="course_image"><img src="/storage/assets/images/course_7.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -391,9 +391,9 @@
 <!-- Milestones -->
 
 <div class="milestones">
-    <!-- Background image artis https://unsplash.com/@thepootphotographer -->
+    
     <div class="parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/assets/images/population.jpg" data-speed="0.8"></div>
+        data-image-src="/storage/assets/images/population.jpg" data-speed="0.8"></div>
     <div class="container">
         <div class="row milestones_container">
 
@@ -518,9 +518,9 @@
 
             <!-- <div class="col-lg-5 grouped_col">
                 <div class="grouped_title">Latest News</div>
-                <img src="/assets/images/featured.jpg" alt="" width="auto" height="auto">
+                <img src="/storage/assets/images/featured.jpg" alt="" width="auto" height="auto">
 
-               <div class="featured_background" style="background-image:url(/assets/images/featured.jpg)"></div> 
+               <div class="featured_background" style="background-image:url(/storage/assets/images/featured.jpg)"></div> 
             </div> -->
         </div>
     </div>

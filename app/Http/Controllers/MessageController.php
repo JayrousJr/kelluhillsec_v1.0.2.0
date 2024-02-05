@@ -16,12 +16,13 @@ class MessageController extends Controller
         'name' => 'required|min:5|max:255|string',
         'email' => 'required|email|min:5|max:255',
         'message' => 'required|min:5|max:255|string',
-        'subject' =>'string|min:3|max:255',
+        'subject' =>'required|string|min:3|max:255',
     ];
 
-    $validator = Validator::make($request->all(),$rules);
+    $validator = Validator::make($request->all(), $rules);
       if ($validator->fails()) {
-            return redirect("/contact#contact")->withErrors($validator)->withInput();
+            return redirect('/contact#contact')->withErrors($validator)->withInput();
+
         } else {
             try {
                 //code...
@@ -29,10 +30,11 @@ class MessageController extends Controller
 
                 $data = new Message();
 
-                $data->name = $request->data('name');
-                $data->email = $request->data('email');
-                $data->subject = $request->data('subject');
-                $data->message = $request->data('message');
+                $data->name = $request->input('name');
+                $data->email = $request->input('email');
+                $data->message = htmlspecialchars($request->input('message'));
+                $data->subject = htmlspecialchars($request->input('subject'));
+
                 $data->save();
                 // $mailto = 'info@cloudstechn.com';
                 // Mail::to($mailto)->send(new MessageReceived($data));

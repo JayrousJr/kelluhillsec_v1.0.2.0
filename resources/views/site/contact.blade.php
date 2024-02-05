@@ -15,7 +15,7 @@
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
     <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/assets/images/contact.jpg" data-speed="0.8"></div>
+        data-image-src="/storage/assets/images/contact.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -49,7 +49,7 @@
                                 <div class="logo_container">
                                     <a href="#">
                                         <div class="logo_content d-flex flex-row align-items-end justify-content-start">
-                                            <!-- <div class="logo_img"><img src="/assets/images/log.png" alt=""></div> -->
+                                            <!-- <div class="logo_img"><img src="/storage/assets/images/log.png" alt=""></div> -->
                                             <div class="logo_text">learn</div>
                                         </div>
                                     </a>
@@ -90,36 +90,37 @@
                         </div>
                     </div>
                     <div class="contact_form_container">
-                        <form action="{{route('message')}}" method="post" id="contact_form" class="contact_form">
+                        <form action="{{route('message')}}" method="POST" class="contact_form">
                             @csrf
                             <div>
                                 <div class="row">
-                                    <div class="col-lg-6 contact_name_col">
-                                        <input type="text" class="contact_input @error('name') is-invalid @enderror"
+                                    <div class="col-lg-6 form-group">
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
                                             name="name" placeholder="Name">
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">{{$message}}</span>
                                         @enderror
                                     </div>
-                                    <div class="col-lg-6">
-                                        <input type="email" class="contact_input @error('email') is-invalid @enderror"
-                                            placeholder="E-mail" name="email">
-                                        @error('email')
+                                    <div class="col-lg-6 form-group">
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                            placeholder="E-mail" name="email"> 
+                                                                           
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">{{$message}}</span>
                                         @enderror
-                                    </div>
+                                                                           </div>
                                 </div>
                             </div>
-                            <div>
-                                <input type="text" class="contact_input @error('subject') is-invalid @enderror"
+                            <div class="form-group">
+                                <input type="text" name="subject" class="form-control @error('subject') is-invalid @enderror"
                                     placeholder="Subject">
                                 @error('subject')
                                 <span class="invalid-feedback" role="alert">{{$message}}</span>
                                 @enderror
                             </div>
-                            <div>
-                                <textarea class="contact_input @error('message') is-invalid @enderror contact_textarea"
-                                    placeholder="Message" name="message"></textarea>
+                            <div class="form-group">
+                                <textarea class="form-control @error('message') is-invalid @enderror contact_textarea"
+                                    placeholder="Type your Message here" name="message"></textarea>
                                 @error('message')
                                 <span class="invalid-feedback" role="alert">{{$message}}</span>
                                 @enderror

@@ -45,7 +45,7 @@
                                 <div class="logo_container">
                                     <a href="#">
                                         <div class="logo_content d-flex flex-row align-items-end justify-content-start">
-                                            <!-- <div class="logo_img"><img src="/assets/images/logo.png" width="50px"
+                                            <!-- <div class="logo_img"><img src="/storage/assets/images/logo.png" width="50px"
                                                     height="auto" alt=""></div> -->
                                             <div class="logo_text">Kellu Hill School</div>
                                         </div>

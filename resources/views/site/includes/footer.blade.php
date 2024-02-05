@@ -11,7 +11,7 @@
                         <a>
                             <div class="logo_content d-flex flex-row align-items-start justify-content-start">
                                 <div class="logo_img">
-                                    <img src="/assets/images/logo.png" width="120px" height="auto" alt="">
+                                    <img src="/storage/assets/images/logo.png" width="120px" height="auto" alt="">
                                 </div>
                             </div>
                         </a>

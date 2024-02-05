@@ -2,32 +2,34 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
 use Filament\Panel;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Permission\Traits\HasRoles;
+use Shetabit\Visitor\Traits\Visitable;
+use Shetabit\Visitor\Traits\Visitor;
 
-class User extends Authenticatable implements FilamentUser
+// use Illuminate\Support\Str;
+
+class User extends Authenticatable implements FilamentUser, MustVerifyEmail
 {
-    use HasApiTokens, SoftDeletes, HasRoles;
-    use HasFactory;
+    use Hasroles, Visitor, Visitable;
+    use HasApiTokens;
+    use HasFactory, SoftDeletes;
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public function canAccessPanel(Panel $panel): bool
-    {
-        // return $this->hasRole(['Director', 'Administrator']);
-        return true;
-    }
+
+    protected $guarded = ['id'];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -37,8 +39,14 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
-        'profile_photo_path',
+        'phone',
+        'nationality',
+        'city',
+        'profession',
         'role',
+        'about',
+        'team_member',
+        'profile_photo_path', 'languages',
     ];
 
     /**
@@ -60,6 +68,7 @@ class User extends Authenticatable implements FilamentUser
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'languages' => 'array',
     ];
 
     /**
@@ -70,4 +79,31 @@ class User extends Authenticatable implements FilamentUser
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->hasRole(['Manager', 'Administrator']);
+        // return true;
+    }
+
+    public function service_order()
+    {
+        return $this->hasMany(ServiceOrder::class, 'client_id', 'id');
+    }
+
+    public function service_request()
+    {
+        return $this->hasMany(ServiceRequest::class, 'client_id', 'id');
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'user_id', 'id');
+    }
+
+    public function isManager(): bool
+    {
+        return $this->role === "Manager";
+    }
 }

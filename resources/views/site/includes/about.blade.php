@@ -4,14 +4,15 @@
 <head>
     <title>About | Kellu Hill School</title>
     <meta charset="utf-8">
+    <link href="/storage/images/logo/icon.png" rel="icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Elearn project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap4/bootstrap.min.css">
-    <link href="/assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/plugins/video-js/video-js.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/about.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/about_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/storage/assets/styles/bootstrap4/bootstrap.min.css">
+    <link href="/storage/assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/storage/assets/plugins/video-js/video-js.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/storage/assets/styles/about.css">
+    <link rel="stylesheet" type="text/css" href="/storage/assets/styles/about_responsive.css">
 
     <style>
     .success {
@@ -56,6 +57,12 @@
         /* Text color */
         border-radius: 5px;
         /* Rounded corners for the box */
+    }
+    a{
+        color: #4CAF50;
+    }
+    a:hover{
+        color: #6ad86e;
     }
     </style>
 </head>

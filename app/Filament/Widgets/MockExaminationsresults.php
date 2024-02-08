@@ -19,7 +19,7 @@ class MockExaminationsresults extends BaseWidget
 
     protected function getTableQuery(): Builder|Relation|null
     {
-        return Result::latest()->where('examName', '!=', 'Mid-Term Examination')->where('examName', '!=', 'NECTA')->where('examName', '!=', 'Terminal Examination')->where('examName', '!=', 'Annual Examination');
+        return Result::latest()->where('examName', '==', 'MOCK TAHOSSA')->where('examName', '==', 'MOCK OHONGSS')->where('examName', '==', 'MOCK CLUSTER');
     }
 
     protected function getTableColumns(): array

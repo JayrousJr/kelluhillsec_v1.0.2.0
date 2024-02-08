@@ -19,7 +19,7 @@ class MockExaminationsresults extends BaseWidget
 
     protected function getTableQuery(): Builder|Relation|null
     {
-        return Result::latest()->whereIn('examName', ['MOCK TAHOSSA', 'MOCK OHONGSS', 'MOCK CLUSTER'])
+        return Result::latest()->whereIn('examName', ['MOCK TAHOSSA', 'MOCK OHONGSS', 'MOCK CLUSTER']);
     }
 
     protected function getTableColumns(): array

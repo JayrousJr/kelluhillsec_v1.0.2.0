@@ -9,7 +9,7 @@ return [
         'city' => 'Morogoro',
         'country' => 'Tanzania'
     ],
-    'email' => 'info@kellusec.com',
+    'email' => 'info@kellusec.ac.tz',
     'phone1' => '+255 752 870 339',
     'phone2' => '+255 755 019 634',
     'phone3' => '+255 782 241 030',

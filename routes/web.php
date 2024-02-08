@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesControler;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\Filament\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get(
         return route('filament.admin.pages.dashboard');
     }
 )->name('login');
+
+Route::post('/auth/logout', [LogoutController::class, 'logout'])->name('filament.admin.auth.logout');

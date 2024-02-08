@@ -18,7 +18,7 @@ class MidTermResults extends BaseWidget
     protected static ?string $maxHeight = '250px';
     protected function getTableQuery(): Builder|Relation|null
     {
-        return Result::latest()->where('examName', 'Mid-Term Examination')->where('examName', 'Annual Examination')->where('examName', 'Terminal Examination');
+        return Result::latest()->where('examName', 'Terminal Examination');
     }
 
     protected function getTableColumns(): array

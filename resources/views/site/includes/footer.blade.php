@@ -7,7 +7,16 @@
             <!-- About -->
             <div class="col-lg-3 footer_col">
                 <div class="footer_about">
-                    <div class="logo_container">
+                    <div class="footer_title">Social Media</div>
+                    <div class="footer_social" style="margin-top:10px; top:10px">
+                        <ul>
+                            @foreach ($social as $data)
+                            <li><a href="{{$data->link}}"><i class="fa fa-{{$data->icon}}" aria-hidden="true"></i></a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="logo_container" style="margin-top:60px; top:60px">
                         <a>
                             <div class="logo_content d-flex flex-row align-items-start justify-content-start">
                                 <div class="logo_img">
@@ -15,18 +24,6 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
-                    <div class="footer_about_text" style="margin-top:60px; top:60px">
-                        <p>Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar.
-                        </p>
-                    </div>
-                    <div class="footer_social" style="margin-top:0px; top:60px">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -49,6 +46,7 @@
                     <ul class="footer_list">
                         <li><a href="{{route('contact')}}">Contacts</a></li>
                         <li><a href="{{route('news')}}">News</a></li>
+                        <li><a href="{{route('results')}}">Results</a></li>
                         <li><a href="{{route('about')}}">Teachers</a></li>
                     </ul>
                 </div>
@@ -62,7 +60,8 @@
                             <div class="footer_contact_title">Address:</div>
                             <div class="footer_contact_line">{{config('company.address.street')}}
                                 {{config('company.address.city')}},
-                                {{config('company.address.country')}}</div>
+                                {{config('company.address.country')}}
+                            </div>
                         </div>
                         <div class="footer_contact_item">
                             <div class="footer_contact_title">Phone:</div>
@@ -84,8 +83,8 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <div class="copyright"> Copyright &copy;<?php echo ' '.date('Y'); ?> Designed By <a
-                        href="https://cloudstechn.com" target="_blank">TechClouds</a>
+                <div class="copyright" style="font-size: 16px;"> Copyright &copy;<?php echo ' ' . date('Y'); ?> Designed
+                    By <a href="https://cloudstechn.com" target="_blank">TechClouds Team</a>
                 </div>
             </div>
         </div>
@@ -109,12 +108,12 @@
 <script src="assets/js/custom.js"></script>
 
 <script>
-$(document).ready(function() {
-    //hide the notification after 2seconds  
-    setTimeout(function() {
-        $("#fade").fadeOut('slow');
-    }, 5000);
-});
+    $(document).ready(function() {
+        //hide the notification after 2seconds  
+        setTimeout(function() {
+            $("#fade").fadeOut('slow');
+        }, 5000);
+    });
 </script>
 </body>
 

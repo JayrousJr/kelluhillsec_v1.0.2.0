@@ -2,7 +2,7 @@
 
 
 return [
-    'name'  =>  'Kellu Sec',
+    'name'  =>  'Kellu Hill Secondary School',
     'link' => 'https://cloudstechn.com/',
     'address' => [
         'street' => 'Mlimba',

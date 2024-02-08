@@ -7,60 +7,17 @@
         <!-- Home Slider -->
         <div class="owl-carousel owl-theme home_slider">
 
+            @foreach ($carousel as $data)
             <!-- Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/storage/assets/images/bg-01.jpg)"></div>
+                <div class="home_slider_background" style="background-image:url(/storage/{{$data->image}})"></div>
                 <div class="home_container">
                     <div class="container">
                         <div class="row">
                             <div class="col">
                                 <div class="home_content text-center">
                                     <div class="home_text">
-                                        <div class="home_subtitle">Maecenas rutrum viverra sapien sed fermentum. Morbi
-                                            tempor odio eget lacus tempus pulvinar. Praesent vel nisl fermentum, gravida
-                                            augue ut, fermentum ipsum.</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Item -->
-            <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/storage/assets/images/ab1.jpg)"></div>
-                <div class="home_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="home_content text-center">
-                                    <div class="home_text">
-                                        <div class="home_subtitle">Maecenas rutrum viverra sapien sed fermentum. Morbi
-                                            tempor odio eget lacus tempus pulvinar. Praesent vel nisl fermentum, gravida
-                                            augue ut, fermentum ipsum.</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Item -->
-            <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/storage/assets/images/ab4.jpg)"></div>
-                <div class="home_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="home_content text-center">
-                                    <div class="home_text">
-                                        <div class="home_subtitle">Maecenas rutrum viverra sapien sed fermentum. Morbi
-                                            tempor odio eget lacus tempus pulvinar. Praesent vel nisl fermentum, gravida
-                                            augue ut, fermentum ipsum.</div>
+                                        <div class="home_subtitle">{!!$data->caption!!}</div>
                                     </div>
                                 </div>
                             </div>
@@ -68,6 +25,8 @@
                     </div>
                 </div>
             </div>
+
+            @endforeach
 
         </div>
     </div>
@@ -91,83 +50,33 @@
                         <!-- Updates and Results -->
                         <div class="col-lg-6 featured_col">
                             <div class="featured_content">
-                                <div class="grouped_title">Upcoming Events</div>
+                                <div class="grouped_title">Results</div>
                                 <div class="events">
-
+                                    @foreach ($result as $data)
                                     <!-- Event -->
                                     <div class="event d-flex flex-row align-items-start justify-content-start">
                                         <div>
                                             <div
                                                 class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">20</div>
-                                                <div class="event_month">April</div>
+                                                <div class="event_day">{{$data->year}}</div>
+                                                <div class="event_month">Approved</div>
                                             </div>
                                         </div>
                                         <div class="event_body">
-                                            <div class="event_title"><a href="#">New Marketing Course Release</a></div>
-                                            <div class="event_subtitle">Location: Online Platform</div>
+                                            <div class="event_title"><a
+                                                    href="{{route('result', $data->id)}}">{{$data->formId}}
+                                                    {{$data->examName}}
+                                                    {{$data->year}}</a>
+                                            </div>
+                                            <div class="news_post_link">
+                                                <a href="{{route('result', $data->id)}}">View More about this
+                                                    results</a>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <!-- Event -->
-                                    <div class="event d-flex flex-row align-items-start justify-content-start">
-                                        <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">23</div>
-                                                <div class="event_month">April</div>
-                                            </div>
-                                        </div>
-                                        <div class="event_body">
-                                            <div class="event_title"><a href="#">Students Art Workshop</a></div>
-                                            <div class="event_subtitle">Location: Online Platform</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Event -->
-                                    <div class="event d-flex flex-row align-items-start justify-content-start">
-                                        <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">25</div>
-                                                <div class="event_month">April</div>
-                                            </div>
-                                        </div>
-                                        <div class="event_body">
-                                            <div class="event_title"><a href="#">Launch Party for a new Platform</a>
-                                            </div>
-                                            <div class="event_subtitle">Location: Online Platform</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Event -->
-                                    <div class="event d-flex flex-row align-items-start justify-content-start">
-                                        <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">27</div>
-                                                <div class="event_month">April</div>
-                                            </div>
-                                        </div>
-                                        <div class="event_body">
-                                            <div class="event_title"><a href="#">New Marketing Course</a></div>
-                                            <div class="event_subtitle">Location: Online Platform</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Event -->
-                                    <div class="event d-flex flex-row align-items-start justify-content-start">
-                                        <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">29</div>
-                                                <div class="event_month">April</div>
-                                            </div>
-                                        </div>
-                                        <div class="event_body">
-                                            <div class="event_title"><a href="#">New Marketing Course</a></div>
-                                            <div class="event_subtitle">Location: Online Platform</div>
-                                        </div>
+                                    @endforeach
+                                    <div class="news_post_link text-center">
+                                        <a href="{{route('results')}}">View More Previous Results</a>
                                     </div>
 
                                 </div>
@@ -180,62 +89,28 @@
 
                             <div class="news">
                                 <div class="grouped_title text-center mb-2">Latest News</div>
-                                <!-- News Post -->
-                                <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
-                                    <div>
-                                        <div class="news_post_image"><img src="/storage/assets/images/news_1.jpg"
-                                                alt="https://unsplash.com/@beccatapert"></div>
-                                    </div>
-                                    <div class="news_post_body">
-                                        <div class="news_post_date">April 02, 2018</div>
-                                        <div class="news_post_title"><a href="news.html">Why Choose online
-                                                education?</a></div>
-                                        <div class="news_post_author">By <a href="#">William Smith</a></div>
-                                    </div>
-                                </div>
 
+                                @foreach ($news as $data)
                                 <!-- News Post -->
                                 <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
                                     <div>
-                                        <div class="news_post_image"><img src="/storage/assets/images/news_2.jpg"
-                                                alt="https://unsplash.com/@nbb_photos"></div>
+                                        <div class="news_post_image"><img src="/storage/{{$data->news_image}}"
+                                                alt="Kellu News Picture" style="background-repeat:repeat" width="90px"
+                                                height="50px"></div>
                                     </div>
                                     <div class="news_post_body">
-                                        <div class="news_post_date">April 02, 2018</div>
-                                        <div class="news_post_title"><a href="news.html">Books, Kindle or tablet?</a>
+                                        <div class="news_post_date">{{date('F d, Y',strtotime($data->created_at))}}
                                         </div>
-                                        <div class="news_post_author">By <a href="#">William Smith</a></div>
+                                        <div class="news_post_title"><a
+                                                href="{{route('newsData',$data->id)}}">{{$data->news_title}}</a></div>
+                                        <div class="news_post_author">By <a>{{$data->publisher}}</a></div>
                                     </div>
                                 </div>
-
-                                <!-- News Post -->
-                                <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
-                                    <div>
-                                        <div class="news_post_image"><img src="/storage/assets/images/news_3.jpg"
-                                                alt="https://unsplash.com/@rawpixel"></div>
-                                    </div>
-                                    <div class="news_post_body">
-                                        <div class="news_post_date">April 02, 2018</div>
-                                        <div class="news_post_title"><a href="news.html">Why Choose online
-                                                education?</a></div>
-                                        <div class="news_post_author">By <a href="#">William Smith</a></div>
-                                    </div>
+                                <!-- News Post Ends-->
+                                @endforeach
+                                <div class="news_post_link text-center">
+                                    <a href="{{route('news')}}">More News</a>
                                 </div>
-
-                                <!-- News Post -->
-                                <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
-                                    <div>
-                                        <div class="news_post_image"><img src="/storage/assets/images/news_4.jpg"
-                                                alt="https://unsplash.com/@jtylernix"></div>
-                                    </div>
-                                    <div class="news_post_body">
-                                        <div class="news_post_date">April 02, 2018</div>
-                                        <div class="news_post_title"><a href="news.html">Books, Kindle or tablet?</a>
-                                        </div>
-                                        <div class="news_post_author">By <a href="#">William Smith</a></div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -391,10 +266,13 @@
 <!-- Milestones -->
 
 <div class="milestones">
-    
+
     <div class="parallax_background parallax-window" data-parallax="scroll"
         data-image-src="/storage/assets/images/population.jpg" data-speed="0.8"></div>
     <div class="container">
+        @foreach ($population as $data)
+
+
         <div class="row milestones_container">
 
             <!-- Milestone -->
@@ -402,7 +280,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-users"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="320">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->students}}">0</div>
                     <div class="milestone_text">Students</div>
                 </div>
             </div>
@@ -412,7 +290,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-briefcase"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="30">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->teachers}}">0</div>
                     <div class="milestone_text">Teaching Staff</div>
                 </div>
             </div>
@@ -422,7 +300,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-gear"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="14">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->nonTeachers}}">0</div>
                     <div class="milestone_text">Non Teaching Staff</div>
                 </div>
             </div>
@@ -432,12 +310,13 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-building"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="4">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->levels}}">0</div>
                     <div class="milestone_text">Class Levels</div>
                 </div>
             </div>
 
         </div>
+        @endforeach
     </div>
 </div>
 

@@ -46,10 +46,10 @@
                                 <a>{{$data->news_title}}</a>
                             </div>
                             <div class="news_post_text">
-                                <p>{!! \Illuminate\Support\Str::limit(strip_tags($data->news_body), 300)!!}</p>
+                                <p>{!! \Illuminate\Support\Str::limit(strip_tags($data->news_body), 100)!!}</p>
                             </div>
                             <div class="news_post_link">
-                                <a href="{{route('newsData',$data->id)}}">Read More</a>
+                                <a href="{{route('newsData', $data->id)}}">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
         </div>
 
         <!-- Pagination -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col">
                 <div class="news_pagination">
                     <ul>
@@ -75,7 +75,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 

@@ -73,7 +73,7 @@ class UserResource extends Resource
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                         $fileName = $file->hashName();
                         $name = explode('.', $fileName);
-                        return (string) str('profile-photos/' . $name[0] . '.png');
+                        return (string) str('assets/img/profile-photos/' . $name[0] . '.webp');
                     })->label('Profile Image'),
             ]);
     }
@@ -106,6 +106,7 @@ class UserResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

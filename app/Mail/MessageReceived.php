@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Message;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,7 +17,7 @@ class MessageReceived extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(protected Message $data)
     {
         //
     }
@@ -39,10 +40,10 @@ class MessageReceived extends Mailable
         return new Content(
             markdown: 'mail.message.received',
             with: [
-                'Emessage' => $this->formData->message,
-                'name' => $this->formData->name,
-                'email' => $this->formData->email,
-                'subject' => $this->formData->subject,
+                'Emessage' => $this->data->message,
+                'name' => $this->data->name,
+                'email' => $this->data->email,
+                'subject' => $this->data->subject,
             ],
         );
     }

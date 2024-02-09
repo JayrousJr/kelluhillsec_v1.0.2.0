@@ -39,7 +39,7 @@ class MessageController extends Controller
                 $data->save();
                 $mailto = 'info@kellusec.ac.tz';
                 Mail::to($mailto)->send(new MessageReceived($data));
-                Mail::to($request->input('email'))->send(new MessageSent($data));
+                Mail::to($mailto)->send(new MessageSent($data));
                 DB::commit();
 
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');

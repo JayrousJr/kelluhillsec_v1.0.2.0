@@ -1,7 +1,7 @@
 <x-mail::message>
     # Introduction
 
-    Hello, You have received a message from {{$name}},<br>
+    Hello, You have received a message from <strong>{{$name}}</strong>,<br>
     Email: {{$email}}<br>
     Message says: <br>{{$message}}
 

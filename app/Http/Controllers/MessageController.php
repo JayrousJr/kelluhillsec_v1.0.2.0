@@ -5,24 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Mail\MessageReceived;
+use App\Mail\MessageSent;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
-    function message(Request $request) {
+    function message(Request $request)
+    {
         $rules = [
-        'name' => 'required|min:5|max:255|string',
-        'email' => 'required|email|min:5|max:255',
-        'message' => 'required|min:5|max:255|string',
-        'subject' =>'required|string|min:3|max:255',
-    ];
+            'name' => 'required|min:5|max:255|string',
+            'email' => 'required|email|min:5|max:255',
+            'message' => 'required|min:5|max:255|string',
+            'subject' => 'required|string|min:3|max:255',
+        ];
 
-    $validator = Validator::make($request->all(), $rules);
-      if ($validator->fails()) {
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
             return redirect('/contact#contact')->withErrors($validator)->withInput();
-
         } else {
             try {
                 //code...
@@ -36,9 +37,9 @@ class MessageController extends Controller
                 $data->subject = htmlspecialchars($request->input('subject'));
 
                 $data->save();
-                // $mailto = 'info@cloudstechn.com';
-                // Mail::to($mailto)->send(new MessageReceived($data));
-
+                $mailto = 'info@kellusec.ac.tz';
+                Mail::to($mailto)->send(new MessageReceived($data));
+                Mail::to($data->email)->send(new MessageSent($data));
                 DB::commit();
 
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');

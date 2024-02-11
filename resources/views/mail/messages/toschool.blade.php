@@ -9,4 +9,6 @@
         Go to The Site
     </x-mail::button>
 
+    Thanks,<br>
+    {{ config('app.name') }}
 </x-mail::message>

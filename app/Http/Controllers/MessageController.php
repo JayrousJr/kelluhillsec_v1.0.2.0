@@ -40,7 +40,7 @@ class MessageController extends Controller
 
                 DB::commit();
                 $mailto = 'info@kellusec.ac.tz';
-                Mail::to($mailto)->send(new MessageReceived($data));
+                // Mail::to($mailto)->send(new MessageReceived($data));
                 Mail::to($data->email)->send(new MessageSent($data));
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');

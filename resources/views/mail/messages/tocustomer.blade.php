@@ -7,5 +7,6 @@
         Go to The WebSite
     </x-mail::button>
 
-
+    Thanks,<br>
+    {{ config('app.name') }}
 </x-mail::message>

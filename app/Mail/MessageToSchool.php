@@ -2,15 +2,15 @@
 
 namespace App\Mail;
 
-use App\Models\Message;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use App\Models\Message;
 
-class MessageSent extends Mailable
+class MessageToSchool extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,7 +28,7 @@ class MessageSent extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Message Received',
+            subject: 'Message to Kellu Hill School',
         );
     }
 
@@ -38,13 +38,7 @@ class MessageSent extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.message.toKellu',
-            with: [
-                'Emessage' => $this->data->message,
-                'name' => $this->data->name,
-                'email' => $this->data->email,
-                'subject' => $this->data->subject,
-            ],
+            markdown: 'mail.messages.toschool',
         );
     }
 

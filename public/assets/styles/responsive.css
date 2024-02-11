@@ -67,7 +67,7 @@
 	{
 		width: 100%;
 		padding-left: 167px;
-		margin-top: 0px;
+		/* margin-top: 500px; */
 	}
 	.footer_contact_info
 	{
@@ -136,7 +136,7 @@
 	.featured_container
 	{
 		padding-left: 0;
-		margin-top: 60px;
+		/* margin-top: 60px; */
 	}
 	.featured_col:first-child
 	{

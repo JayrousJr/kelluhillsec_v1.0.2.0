@@ -49,7 +49,7 @@
                 <!-- Updates and Results -->
                 <div class="col-lg-3 featured_col">
                     <div class="featured_content">
-                        <div class="grouped_title">Results</div>
+                        <div class="grouped_title text-center">Results</div>
                         <div class="events">
                             @foreach ($result as $data)
                             <!-- Event -->
@@ -84,7 +84,7 @@
                 <!-- Latest News -->
                 <div class="col-lg-3 offset-lg-6 featured_col bg-light">
                     <div class="news">
-                        <div class="grouped_title mb-2">Latest News</div>
+                        <div class="grouped_title mb-2 text-center">Latest News</div>
 
                         @foreach ($news as $data)
                         <!-- News Post -->

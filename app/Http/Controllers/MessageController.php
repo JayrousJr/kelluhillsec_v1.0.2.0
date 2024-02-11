@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
-use App\Mail\MessageReceived;
-use App\Mail\MessageSent;
 use App\Mail\MessageToCustomer;
 use App\Mail\MessageToSchool;
 use Illuminate\Support\Facades\DB;
@@ -41,11 +39,11 @@ class MessageController extends Controller
                 $data->save();
 
                 $mailto = 'info@kellusec.ac.tz';
+                Mail::to($mailto)->send(new MessageToSchool($data));
+                Mail::to($data->email)->send(new MessageToCustomer($data));
 
                 DB::commit();
 
-                Mail::to($mailto)->send(new MessageToSchool($data));
-                Mail::to($data->email)->send(new MessageToCustomer($data));
 
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');

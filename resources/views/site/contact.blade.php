@@ -14,7 +14,8 @@
 
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
-    <div class="home_background parallax_background parallax-window" data-parallax="scroll" data-image-src="/assets/images/contact.jpg" data-speed="0.8"></div>
+    <div class="home_background parallax_background parallax-window" data-parallax="scroll"
+        data-image-src="/assets/images/about.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -65,13 +66,16 @@
                                 <div>
                                     <div class="row">
                                         <div class="col-lg-6 form-group">
-                                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name">
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                                name="name" placeholder="Name">
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">{{$message}}</span>
                                             @enderror
                                         </div>
                                         <div class="col-lg-6 form-group">
-                                            <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="E-mail" name="email">
+                                            <input type="email"
+                                                class="form-control @error('email') is-invalid @enderror"
+                                                placeholder="E-mail" name="email">
 
                                             @error('email')
                                             <span class="invalid-feedback" role="alert">{{$message}}</span>
@@ -80,18 +84,23 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="subject" class="form-control @error('subject') is-invalid @enderror" placeholder="Subject">
+                                    <input type="text" name="subject"
+                                        class="form-control @error('subject') is-invalid @enderror"
+                                        placeholder="Subject">
                                     @error('subject')
                                     <span class="invalid-feedback" role="alert">{{$message}}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control @error('message') is-invalid @enderror contact_textarea" placeholder="Type your Message here" name="message"></textarea>
+                                    <textarea
+                                        class="form-control @error('message') is-invalid @enderror contact_textarea"
+                                        placeholder="Type your Message here" name="message"></textarea>
                                     @error('message')
                                     <span class="invalid-feedback" role="alert">{{$message}}</span>
                                     @enderror
                                 </div>
-                                <button class="contact_button"><span>send message</span><span class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+                                <button class="contact_button"><span>send message</span><span class="button_arrow"><i
+                                            class="fa fa-angle-right" aria-hidden="true"></i></span></button>
                             </form>
                         </div>
                         <div class="col-xl-3">
@@ -107,11 +116,14 @@
                                     </div>
                                     <div class="contact_info_item">
                                         <div class="contact_info_title">Phone:</div>
-                                        <div class="contact_info_line"><a href="tel:{{config('company.phone1')}}">{{config('company.phone1')}}</a>
+                                        <div class="contact_info_line"><a
+                                                href="tel:{{config('company.phone1')}}">{{config('company.phone1')}}</a>
                                         </div>
-                                        <div class="contact_info_line"><a href="tel:{{config('company.phone2')}}">{{config('company.phone2')}}</a>
+                                        <div class="contact_info_line"><a
+                                                href="tel:{{config('company.phone2')}}">{{config('company.phone2')}}</a>
                                         </div>
-                                        <div class="contact_info_line"><a href="tel:{{config('company.phone3')}}">{{config('company.phone3')}}</a>
+                                        <div class="contact_info_line"><a
+                                                href="tel:{{config('company.phone3')}}">{{config('company.phone3')}}</a>
                                         </div>
                                     </div>
                                     <div class="contact_info_item">

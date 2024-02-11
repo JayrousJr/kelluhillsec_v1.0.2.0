@@ -16,9 +16,9 @@ class PagesControler extends Controller
     {
         $data['carousel'] = Carousel::latest()->get();
         $data['population'] = Population::latest()->take(1)->get();
-        $data['news'] = News::latest()->take(0)->get();
+        $data['news'] = News::latest()->take(5)->get();
         $data['social']  = Network::latest()->get();
-        $data['result'] = Result::latest()->take(2)->get();
+        $data['result'] = Result::latest()->take(4)->get();
         return view('/site/index', $data);
     }
     function news()

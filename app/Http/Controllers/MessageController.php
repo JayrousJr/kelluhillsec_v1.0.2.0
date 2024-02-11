@@ -40,7 +40,7 @@ class MessageController extends Controller
 
                 $mailto = 'info@kellusec.ac.tz';
                 Mail::to($mailto)->send(new MessageToSchool($data));
-                Mail::to($data->email)->send(new MessageToCustomer($data));
+                Mail::to($mailto)->send(new MessageToCustomer($data));
 
                 DB::commit();
 

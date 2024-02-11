@@ -35,7 +35,7 @@
 
 <!-- Featured Course -->
 
-<div class="featured">
+<div class="featured" style="margin-top: 200px;">
     <div class="row">
         <!-- Home Slider Nav -->
         <div class="home_slider_nav_container d-flex flex-row align-items-start justify-content-between">

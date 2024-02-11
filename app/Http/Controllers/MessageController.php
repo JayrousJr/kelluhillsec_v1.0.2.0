@@ -37,11 +37,11 @@ class MessageController extends Controller
                 $data->subject = htmlspecialchars($request->input('subject'));
 
                 $data->save();
+
+                DB::commit();
                 $mailto = 'info@kellusec.ac.tz';
                 Mail::to($mailto)->send(new MessageReceived($data));
-                Mail::to($mailto)->send(new MessageSent($data));
-                DB::commit();
-
+                Mail::to($data->email)->send(new MessageSent($data));
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');
             } catch (\Exception $e) {

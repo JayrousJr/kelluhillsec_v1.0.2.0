@@ -66,7 +66,7 @@
                                             <div class="col-lg-6">
                                                 @if ($result->link !== NULL)
                                                 <div class="button button_1">
-                                                    <a href="{{$result->link}}"> Go to NECTA
+                                                    <a href="{{$result->link}}" target="_blank"> Go to NECTA
                                                         Website Here
                                                         <div class="button_arrow">
                                                             <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -80,7 +80,7 @@
                                                 @endif
 
                                                 <div class="button button_1 mt-4">
-                                                    <a href="storage/{{$result->pdf}}">Download
+                                                    <a href="storage/{{$result->pdf}}" target="_blank">Download
                                                         Results Here...
                                                         <div class="button_arrow">
                                                             <i class="fa fa-angle-right" aria-hidden="true"></i>

@@ -89,7 +89,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <div class="copyright" style="font-size: 16px;"> Copyright &copy;<?php echo ' ' . date('Y'); ?> Designed
+                <div class="copyright" style="font-size: 14px;"> Copyright &copy;<?php echo ' ' . date('Y'); ?> Designed
                     By <a href="https://cloudstechn.com" target="_blank">TechClouds Team</a>
                 </div>
             </div>

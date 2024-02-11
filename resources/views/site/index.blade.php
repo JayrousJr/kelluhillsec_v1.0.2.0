@@ -139,7 +139,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_2.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/science.webp" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -155,7 +155,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_5.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/history.png" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -172,7 +172,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_4.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/business.webp" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -190,7 +190,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_3.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/necta.png" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -208,7 +208,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_6.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/necta.png" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -226,7 +226,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/assets/images/course_7.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/p1.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -262,7 +262,7 @@
 <div class="milestones">
 
     <div class="parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/assets/images/population.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/milestones.jpg" data-speed="0.8"></div>
     <div class="container">
         @foreach ($population as $data)
 

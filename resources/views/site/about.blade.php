@@ -80,7 +80,7 @@
 <div class="milestones">
 
     <div class="parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/assets/images/population.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/milestones.jpg" data-speed="0.8"></div>
     <div class="container">
         @foreach ($population as $data)
 

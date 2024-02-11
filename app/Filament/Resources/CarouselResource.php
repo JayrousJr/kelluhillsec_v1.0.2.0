@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
@@ -38,9 +39,9 @@ class CarouselResource extends Resource
                     ->imageResizeTargetWidth('1920')
                     ->imageResizeTargetHeight('1032')
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                        $fileName = $file->hashName();
+                        $fileName = Str::random(10);
                         $name = explode('.', $fileName);
-                        return (string) str('assets/img/carousel' . $name[0] . '.webp');
+                        return (string) str('images/carousel/carousel_' . $name[0] . '.webp');
                     })->label('Carouse Image'),
                 Forms\Components\RichEditor::make('caption')
                     ->required()

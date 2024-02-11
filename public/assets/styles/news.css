@@ -285,7 +285,7 @@ section
 {
 	font-size: 20px;
 	line-height: 47px;
-	color: #ffae00;
+	color: #00ff9d;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -294,7 +294,7 @@ section
 }
 .button:hover
 {
-	background: #ffae00;
+	background: #00ff9d;
 }
 .button:hover .button_arrow
 {
@@ -302,7 +302,7 @@ section
 }
 .button:hover .button_arrow i
 {
-	color: #ffae00;
+	color: #00ff9d;
 }
 .section_title h2
 {
@@ -1444,7 +1444,7 @@ section
 .footer .logo_container
 {
 	position: absolute;
-	top: -10px;
+	top: 30px;
 	left: 0;
 }
 .footer_about_text
@@ -1475,7 +1475,7 @@ section
 }
 .footer_social ul li a i:hover
 {
-	color: #ffae00;
+	color: #00ff9d;
 }
 .copyright
 {

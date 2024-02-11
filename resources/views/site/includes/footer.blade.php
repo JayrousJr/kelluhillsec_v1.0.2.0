@@ -5,10 +5,10 @@
         <div class="row">
 
             <!-- About -->
-            <div class="col-lg-3 footer_col">
+            <div class="col-lg-2 footer_col">
                 <div class="footer_about">
                     <div class="footer_title">Social Media</div>
-                    <div class="footer_social" style="margin-top:10px; top:10px">
+                    <div class="footer_social">
                         <ul>
                             @foreach ($social as $data)
                             <li><a href="{{$data->link}}"><i class="fa fa-{{$data->icon}}" aria-hidden="true"></i></a>
@@ -16,11 +16,17 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="logo_container" style="margin-top:60px; top:60px">
+
+                </div>
+            </div>
+            <div class="col-lg-3 footer_col">
+                <div class="footer_links">
+                    <div class="footer_title">School Logo</div>
+                    <div class="logo_container">
                         <a>
                             <div class="logo_content d-flex flex-row align-items-start justify-content-start">
                                 <div class="logo_img">
-                                    <img src="/storage/assets/images/logo.png" width="120px" height="auto" alt="">
+                                    <img src="/assets/images/logo.png" width="120px" height="auto" alt="">
                                 </div>
                             </div>
                         </a>
@@ -28,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 footer_col">
+            <div class="col-lg-2 footer_col">
                 <div class="footer_links">
                     <div class="footer_title">Quick menu</div>
                     <ul class="footer_list">
@@ -40,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 footer_col">
+            <div class="col-lg-2 footer_col">
                 <div class="footer_links">
                     <div class="footer_title">Useful Links</div>
                     <ul class="footer_list">
@@ -102,8 +108,6 @@
 <script src="assets/plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="assets/plugins/easing/easing.js"></script>
-<script src="assets/plugins/video-js/video.min.js"></script>
-<script src="assets/plugins/video-js/Youtube.min.js"></script>
 <script src="assets/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="assets/js/custom.js"></script>
 

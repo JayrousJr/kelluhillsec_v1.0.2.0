@@ -13,6 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+use Illuminate\Support\Str;
 
 class NewsResource extends Resource
 {
@@ -50,9 +51,9 @@ class NewsResource extends Resource
                     ->imageResizeTargetHeight('600')
                     ->imageEditor()
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                        $fileName = $file->hashName();
+                        $fileName = Str::random(9);
                         $name = explode('.', $fileName);
-                        return (string) str('/assets/img/news/' . $name[0] . '.webp');
+                        return (string) str('/images/news/new-' . $name[0] . '.webp');
                     })->label('Gallery Image'),
             ]);
     }

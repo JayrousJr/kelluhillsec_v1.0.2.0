@@ -5,7 +5,7 @@
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
     <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/storage/assets/images/news.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/about.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">

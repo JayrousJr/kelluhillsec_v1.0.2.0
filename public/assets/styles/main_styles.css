@@ -291,7 +291,7 @@ section
 {
 	font-size: 20px;
 	line-height: 47px;
-	color: #ffae00;
+	color: #00ff9d;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -300,7 +300,7 @@ section
 }
 .button:hover
 {
-	background: #ffae00;
+	background: #00ff9d;
 }
 .button:hover .button_arrow
 {
@@ -308,7 +308,7 @@ section
 }
 .button:hover .button_arrow i
 {
-	color: #ffae00;
+	color: #00ff9d;
 }
 .section_title h2
 {
@@ -893,8 +893,20 @@ section
 
 .home
 {
-	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 51%;
 	height: 100vh;
+}
+@media only screen and (max-width: 1192px)
+{
+	.home
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 80vh;
+}
 }
 .home_slider_container
 {
@@ -960,6 +972,19 @@ section
 	margin-right: auto;
 	margin-top: 14px;
 }
+.home_subtitle p {
+	max-width: 670px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 2;
+	padding: 8px 16px;
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 14px;
+	background-color: rgba(6, 236, 121, 0.5);
+
+}
 .home_buttons
 {
 	margin-top: 50px;
@@ -1010,8 +1035,8 @@ section
 .featured_container
 {
 	width: 100%;
-	padding-left: 227px;
-	margin-top: -295px;
+	padding-left: 0px;
+	margin-top: -533px;
 }
 .featured_col:first-child
 {
@@ -1021,11 +1046,36 @@ section
 {
 	padding-left: 0;
 }
+@media only screen and (max-width: 1192px)
+{
+	.home
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 80vh;
+}
 .featured_content
 {
-	padding-left: 50px;
-	padding-top: 63px;
-	padding-right: 50px;
+	padding-left: 40px;
+	padding-top: 40px;
+	padding-right: 51px;
+	padding-bottom: 41px;
+	background: #f2f1f8;
+}
+.featured_container
+	{
+		padding-left: 0;
+		margin-top: -60px;
+	}
+}
+
+
+.featured_content
+{
+	padding-left: 40px;
+	padding-top: 10px;
+	padding-right: 51px;
 	padding-bottom: 41px;
 	background: #f2f1f8;
 }
@@ -1040,6 +1090,7 @@ section
 	background: rgba(5, 105, 54, 1.0);
 	content: '';
 }
+
 .featured_tag
 {
 	height: 31px;
@@ -1197,7 +1248,7 @@ section
 }
 .course_button:hover
 {
-	background: #ffae00;
+	background: #00ff9d;
 }
 .course_button:hover .button_arrow
 {
@@ -1421,8 +1472,8 @@ section
 .milestones
 {
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 71px;
+	padding-top: 156px;
+	padding-bottom: 161px;
 }
 .milestones_container
 {
@@ -1472,7 +1523,7 @@ section
 }
 .grouped_title
 {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 600;
 	color: #44425a;
 }
@@ -1582,7 +1633,7 @@ section
 .events
 {
 	width: 100%;
-	margin-top: 58px;
+	margin-top: 8px;
 }
 .event
 {
@@ -1600,7 +1651,7 @@ section
 }
 .event_day
 {
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #FFFFFF;
 	line-height: 0.75;
@@ -1652,7 +1703,7 @@ section
 .news
 {
 	width: 100%;
-	margin-top: 58px;
+	margin-top: 8px;
 }
 .news_post
 {
@@ -1660,7 +1711,7 @@ section
 }
 .news_post:not(:last-child)
 {
-	margin-bottom: 39px;
+	margin-bottom: 5px;
 }
 .news_post_image
 {
@@ -1834,16 +1885,17 @@ section
 .footer .logo_container
 {
 	position: absolute;
-	top: -10px;
+	top: 30px;
 	left: 0;
 }
+
 .footer_about_text
 {
 	padding-top: 49px;
 }
 .footer_social
 {
-	margin-top: 22px;
+	margin-top: 16px;
 }
 .footer_social ul li
 {
@@ -1855,7 +1907,7 @@ section
 }
 .footer_social ul li a i
 {
-	font-size: 16px;
+	font-size: 30px;
 	color: rgba(5, 105, 54, 1.0);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1865,7 +1917,7 @@ section
 }
 .footer_social ul li a i:hover
 {
-	color: #ffae00;
+	color: #00ff9d;
 }
 .copyright
 {

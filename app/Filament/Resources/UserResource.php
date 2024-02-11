@@ -17,6 +17,7 @@ use App\Filament\Resources\UserResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\UserResource\RelationManagers;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+use Illuminate\Support\Str;
 
 class UserResource extends Resource
 {
@@ -71,9 +72,9 @@ class UserResource extends Resource
                     ->imageResizeTargetWidth('500')
                     ->imageResizeTargetHeight('500')
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                        $fileName = $file->hashName();
+                        $fileName = Str::random(9);
                         $name = explode('.', $fileName);
-                        return (string) str('assets/img/profile-photos/' . $name[0] . '.webp');
+                        return (string) str('images/profile-photos/user-' . $name[0] . '.webp');
                     })->label('Profile Image'),
             ]);
     }

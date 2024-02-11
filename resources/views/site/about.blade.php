@@ -5,7 +5,7 @@
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
     <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/storage/assets/images/about.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/about.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -78,9 +78,13 @@
 <!-- Milestones -->
 
 <div class="milestones">
+
     <div class="parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/storage/assets/images/population.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/population.jpg" data-speed="0.8"></div>
     <div class="container">
+        @foreach ($population as $data)
+
+
         <div class="row milestones_container">
 
             <!-- Milestone -->
@@ -88,7 +92,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-users"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="320">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->students}}">0</div>
                     <div class="milestone_text">Students</div>
                 </div>
             </div>
@@ -98,7 +102,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-briefcase"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="30">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->teachers}}">0</div>
                     <div class="milestone_text">Teaching Staff</div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-gear"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="14">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->nonTeachers}}">0</div>
                     <div class="milestone_text">Non Teaching Staff</div>
                 </div>
             </div>
@@ -118,12 +122,13 @@
                 <div class="milestone text-center">
                     <div class="milestone_icon"><i class="fa fa-building"
                             style="font-size:60px; color:rgb(255, 255, 255)"></i></div>
-                    <div class="milestone_counter" data-end-value="4">0</div>
+                    <div class="milestone_counter" data-end-value="{{$data->levels}}">0</div>
                     <div class="milestone_text">Class Levels</div>
                 </div>
             </div>
 
         </div>
+        @endforeach
     </div>
 </div>
 

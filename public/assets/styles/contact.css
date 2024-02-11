@@ -1007,7 +1007,7 @@ section
 }
 .contact_form_container
 {
-	margin-top: 116px;
+	margin-top: 10px;
 }
 .contact_form
 {
@@ -1161,7 +1161,7 @@ section
 .footer .logo_container
 {
 	position: absolute;
-	top: -10px;
+	top: 30px;
 	left: 0;
 }
 .footer_about_text

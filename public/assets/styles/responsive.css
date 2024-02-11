@@ -339,7 +339,8 @@
 	}
 	.logo_img
 	{
-		width: 40px;
+		width: 80px;
+		margin-bottom: 120px;
 	}
 	.logo_img img
 	{
@@ -388,10 +389,10 @@
 	}
 	.featured_content
 	{
-		padding-left: 30px;
-		padding-right: 30px;
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-left: 40px;
+		padding-right: 5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	.featured_text,
 	.course_text
@@ -506,7 +507,7 @@
 	}
 	.grouped_title
 	{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.accordion
 	{

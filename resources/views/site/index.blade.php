@@ -10,7 +10,8 @@
             @foreach ($carousel as $data)
             <!-- Slider Item -->
             <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(/storage/{{$data->image}})"></div>
+                <div class="home_slider_background" style="background-image:url(/storage/{{$data->image}})">
+                </div>
                 <div class="home_container">
                     <div class="container">
                         <div class="row">
@@ -35,83 +36,77 @@
 <!-- Featured Course -->
 
 <div class="featured">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <!-- Home Slider Nav -->
-                <div class="home_slider_nav_container d-flex flex-row align-items-start justify-content-between">
-                    <div class="home_slider_nav home_slider_prev trans_200"><i class="fa fa-angle-left"
-                            aria-hidden="true"></i></div>
-                    <div class="home_slider_nav home_slider_next trans_200"><i class="fa fa-angle-right"
-                            aria-hidden="true"></i></div>
-                </div>
-                <div class="featured_container">
-                    <div class="row">
-                        <!-- Updates and Results -->
-                        <div class="col-lg-6 featured_col">
-                            <div class="featured_content">
-                                <div class="grouped_title">Results</div>
-                                <div class="events">
-                                    @foreach ($result as $data)
-                                    <!-- Event -->
-                                    <div class="event d-flex flex-row align-items-start justify-content-start">
-                                        <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
-                                                <div class="event_day">{{$data->year}}</div>
-                                                <div class="event_month">Approved</div>
-                                            </div>
-                                        </div>
-                                        <div class="event_body">
-                                            <div class="event_title"><a
-                                                    href="{{route('result', $data->id)}}">{{$data->formId}}
-                                                    {{$data->examName}}
-                                                    {{$data->year}}</a>
-                                            </div>
-                                            <div class="news_post_link">
-                                                <a href="{{route('result', $data->id)}}">View More about this
-                                                    results</a>
-                                            </div>
-                                        </div>
+    <div class="row">
+        <!-- Home Slider Nav -->
+        <div class="home_slider_nav_container d-flex flex-row align-items-start justify-content-between">
+            <div class="home_slider_nav home_slider_prev trans_200"><i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+            <div class="home_slider_nav home_slider_next trans_200"><i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="featured_container">
+            <div class="row">
+                <!-- Updates and Results -->
+                <div class="col-lg-3 featured_col">
+                    <div class="featured_content">
+                        <div class="grouped_title">Results</div>
+                        <div class="events">
+                            @foreach ($result as $data)
+                            <!-- Event -->
+                            <div class="event d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div
+                                        class="event_date d-flex flex-column align-items-center justify-content-center">
+                                        <div class="event_day">{{$data->year}}</div>
+                                        <div class="event_month">Approved</div>
                                     </div>
-                                    @endforeach
-                                    <div class="news_post_link text-center">
-                                        <a href="{{route('results')}}">View More Previous Results</a>
-                                    </div>
-
                                 </div>
+                                <div class="event_body">
+                                    <div class="event_title">
+                                        <a href="{{route('result', $data->id)}}">{{$data->formId}}
+                                            {{$data->examName}}
+                                        </a>
+                                    </div>
+                                    <div class="news_post_link">
+                                        <a href="{{route('result', $data->id)}}">View </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                            <div class="news_post_link text-center">
+                                <a href="{{route('results')}}">View More Previous Results</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest News -->
+                <div class="col-lg-3 offset-lg-6 featured_col bg-light">
+                    <div class="news">
+                        <div class="grouped_title text-center mb-2">Latest News</div>
+
+                        @foreach ($news as $data)
+                        <!-- News Post -->
+                        <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
+                            <div>
+                                <div class="news_post_image"><img src="/storage/{{$data->news_image}}"
+                                        alt="Kellu News Picture" style="background-repeat:repeat" width="90px"
+                                        height="50px"></div>
+                            </div>
+                            <div class="news_post_body">
+                                <div class="news_post_date">{{date('F d, Y',strtotime($data->created_at))}}
+                                </div>
+                                <div class="news_post_title"><a
+                                        href="{{route('newsData',$data->id)}}">{{$data->news_title}}</a>
+                                </div>
+                                <!-- <div class="news_post_author">By <a>{{$data->publisher}}</a></div> -->
                             </div>
                         </div>
-
-                        <!-- Latest News -->
-                        <div class="col-lg-6 featured_col bg-light pb-4">
-
-
-                            <div class="news">
-                                <div class="grouped_title text-center mb-2">Latest News</div>
-
-                                @foreach ($news as $data)
-                                <!-- News Post -->
-                                <div class="news_post d-flex flex-row align-items-start justify-content-start px-4">
-                                    <div>
-                                        <div class="news_post_image"><img src="/storage/{{$data->news_image}}"
-                                                alt="Kellu News Picture" style="background-repeat:repeat" width="90px"
-                                                height="50px"></div>
-                                    </div>
-                                    <div class="news_post_body">
-                                        <div class="news_post_date">{{date('F d, Y',strtotime($data->created_at))}}
-                                        </div>
-                                        <div class="news_post_title"><a
-                                                href="{{route('newsData',$data->id)}}">{{$data->news_title}}</a></div>
-                                        <div class="news_post_author">By <a>{{$data->publisher}}</a></div>
-                                    </div>
-                                </div>
-                                <!-- News Post Ends-->
-                                @endforeach
-                                <div class="news_post_link text-center">
-                                    <a href="{{route('news')}}">More News</a>
-                                </div>
-                            </div>
+                        <!-- News Post Ends-->
+                        @endforeach
+                        <div class="news_post_link text-center">
+                            <a href="{{route('news')}}">More News</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +139,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_2.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_2.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -160,7 +155,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_5.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_5.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -177,7 +172,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_4.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_4.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">All Levels</a></div>
@@ -195,7 +190,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_3.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_3.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -213,7 +208,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_6.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_6.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -231,7 +226,7 @@
                         <!-- Slider Item -->
                         <div class="owl-item">
                             <div class="course">
-                                <div class="course_image"><img src="/storage/assets/images/course_7.jpg" alt=""></div>
+                                <div class="course_image"><img src="/assets/images/course_7.jpg" alt=""></div>
                                 <div class="course_body">
                                     <div class="course_header d-flex flex-row align-items-center justify-content-start">
                                         <div class="course_tag"><a href="#">Service</a></div>
@@ -246,7 +241,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
 
@@ -263,12 +257,12 @@
     </div>
 </div>
 
-<!-- Milestones -->
+<!-- Population -->
 
 <div class="milestones">
 
     <div class="parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/storage/assets/images/population.jpg" data-speed="0.8"></div>
+        data-image-src="/assets/images/population.jpg" data-speed="0.8"></div>
     <div class="container">
         @foreach ($population as $data)
 

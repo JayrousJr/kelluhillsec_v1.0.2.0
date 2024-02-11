@@ -4,8 +4,7 @@
 
 <div class="home">
     <!-- Background image artist https://unsplash.com/@thepootphotographer -->
-    <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-        data-image-src="/storage/assets/images/elements.jpg" data-speed="0.8"></div>
+    <div class="home_background parallax_background parallax-window" data-parallax="scroll" data-image-src="/assets/images/elements.jpg" data-speed="0.8"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -72,15 +71,13 @@
                                     <!-- Event -->
                                     <div class="event d-flex flex-row align-items-start justify-content-start">
                                         <div>
-                                            <div
-                                                class="event_date d-flex flex-column align-items-center justify-content-center">
+                                            <div class="event_date d-flex flex-column align-items-center justify-content-center">
                                                 <div class="event_day">{{$data->year}}</div>
                                                 <div class="event_month">Approved</div>
                                             </div>
                                         </div>
                                         <div class="event_body">
-                                            <div class="event_title"><a
-                                                    href="{{route('result', $data->id)}}">{{$data->formId}}
+                                            <div class="event_title"><a href="{{route('result', $data->id)}}">{{$data->formId}}
                                                     {{$data->examName}}
                                                     {{$data->year}}</a>
                                             </div>

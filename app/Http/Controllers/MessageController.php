@@ -39,9 +39,10 @@ class MessageController extends Controller
                 $data->subject = htmlspecialchars($request->input('subject'));
 
                 $data->save();
+
                 $mailto = 'info@kellusec.ac.tz';
                 Mail::to($mailto)->send(new MessageToSchool($data));
-                Mail::to($request->input('email'))->send(new MessageToCustomer($data));
+                Mail::to($data->email)->send(new MessageToCustomer($data));
                 DB::commit();
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');

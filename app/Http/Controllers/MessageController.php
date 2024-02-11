@@ -6,6 +6,8 @@ use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Mail\MessageReceived;
 use App\Mail\MessageSent;
+use App\Mail\MessageToCustomer;
+use App\Mail\MessageToSchool;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -40,8 +42,8 @@ class MessageController extends Controller
 
                 DB::commit();
                 $mailto = 'info@kellusec.ac.tz';
-                // Mail::to($mailto)->send(new MessageReceived($data));
-                Mail::to($data->email)->send(new MessageSent($data));
+                Mail::to($mailto)->send(new MessageToSchool($data));
+                Mail::to($data->email)->send(new MessageToCustomer($data));
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');
             } catch (\Exception $e) {

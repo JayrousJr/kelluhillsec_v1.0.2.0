@@ -84,7 +84,7 @@
                 <!-- Latest News -->
                 <div class="col-lg-3 offset-lg-6 featured_col bg-light">
                     <div class="news">
-                        <div class="grouped_title text-center mb-2">Latest News</div>
+                        <div class="grouped_title mb-2">Latest News</div>
 
                         @foreach ($news as $data)
                         <!-- News Post -->

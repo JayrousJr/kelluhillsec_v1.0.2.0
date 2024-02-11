@@ -35,9 +35,6 @@ class MessagePolicy
      */
     public function create(User $user): bool
     {
-        if ($user->hasPermissionTo('viewAny')) {
-            return true;
-        }
         return false;
     }
 

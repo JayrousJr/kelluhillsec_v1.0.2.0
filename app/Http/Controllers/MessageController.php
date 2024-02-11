@@ -41,17 +41,20 @@ class MessageController extends Controller
                 $data->save();
 
                 $mailto = 'info@kellusec.ac.tz';
+
+                DB::commit();
+
                 Mail::to($mailto)->send(new MessageToSchool($data));
                 Mail::to($data->email)->send(new MessageToCustomer($data));
-                DB::commit();
+
                 session()->flash('success', 'Your Message has been sent successiful, We will come back to you soon');
                 return redirect()->route('contact');
             } catch (\Exception $e) {
 
                 DB::rollBack();
 
-                // return redirect('contact')->with('error', 'Sorry, your message could not be sent rightnow, we are under maintenance');
-                return redirect('contact')->with('success', 'Your Message has been sent successiful, We will come back to you soon');
+                return redirect('contact')->with('error', 'Sorry, your message could not be sent rightnow, we are under maintenance');
+                // return redirect('contact')->with('success', 'Your Message has been sent successiful, We will come back to you soon');
             }
         }
     }

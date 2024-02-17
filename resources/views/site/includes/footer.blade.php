@@ -44,7 +44,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 footer_col">
+            <div class="col-lg-3 footer_col">
                 <div class="footer_links">
                     <div class="footer_title">Visitors</div>
                     <ul class="footer_list">
@@ -55,7 +55,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4 footer_col">
+            <div class="col-lg-3 footer_col">
                 <div class="footer_contact">
                     <div class="footer_title">Contact Us</div>
                     <div class="footer_contact_info">

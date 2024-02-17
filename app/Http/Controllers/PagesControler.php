@@ -59,23 +59,108 @@ class PagesControler extends Controller
     }
     function news()
     {
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['social']  = Network::latest()->get();
         $data['newsData'] = News::latest()->get();
         return view('/site/news', $data);
     }
     function results()
     {
+
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['social']  = Network::latest()->get();
         $data['result'] = Result::latest()->get();
         return view('/site/results', $data);
     }
     function contact()
     {
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['social']  = Network::latest()->get();
         return view('/site/contact', $data);
     }
     function about()
     {
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['population'] = Population::latest()->take(1)->get();
         $data['social']  = Network::latest()->get();
         $data['population'] = Population::latest()->take(1)->get();
@@ -84,12 +169,54 @@ class PagesControler extends Controller
     }
     function oneNews(News $newsData)
     {
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['social']  = Network::latest()->get();
         $data['news'] = $newsData;
         return view('/site/singlenews', $data);
     }
     function viewResult(Result $result)
     {
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
         $data['social']  = Network::latest()->get();
         $data['result'] = $result;
         return view('/site/singleResult', $data);

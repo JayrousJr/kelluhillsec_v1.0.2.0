@@ -38,9 +38,7 @@ class MessageController extends Controller
 
                 $data->save();
 
-                $mailto = 'info@kellusec.ac.tz';
-                Mail::to($mailto)->send(new MessageToSchool($data));
-                Mail::to($mailto)->send(new MessageToCustomer($data));
+
 
                 DB::commit();
 
@@ -49,6 +47,9 @@ class MessageController extends Controller
                 return redirect()->route('contact');
             } catch (\Exception $e) {
 
+                $mailto = 'info@kellusec.ac.tz';
+                Mail::to($mailto)->send(new MessageToSchool($data));
+                Mail::to($mailto)->send(new MessageToCustomer($data));
                 DB::rollBack();
 
                 return redirect('contact')->with('error', 'Sorry, your message could not be sent rightnow, we are under maintenance');

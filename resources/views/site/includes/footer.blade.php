@@ -5,21 +5,8 @@
         <div class="row">
 
             <!-- About -->
-            <div class="col-lg-2 footer_col">
-                <div class="footer_about">
-                    <div class="footer_title">Social Media</div>
-                    <div class="footer_social">
-                        <ul>
-                            @foreach ($social as $data)
-                            <li><a href="{{$data->link}}"><i class="fa fa-{{$data->icon}}" aria-hidden="true"></i></a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
 
-                </div>
-            </div>
-            <div class="col-lg-3 footer_col">
+            <div class="col-lg-2 footer_col">
                 <div class="footer_links">
                     <div class="footer_title">School Logo</div>
                     <div class="logo_container">
@@ -57,8 +44,18 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="col-lg-3 footer_col">
+            <div class="col-lg-2 footer_col">
+                <div class="footer_links">
+                    <div class="footer_title">Visitors</div>
+                    <ul class="footer_list">
+                        <li>Today: {{$dailyVisitors}}</li>
+                        <li>This Week: {{$weeklyVisitors}}</li>
+                        <li>This month: {{$monthlyVisitors}}</li>
+                        <li>All Time: {{$totalVisitors}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 footer_col">
                 <div class="footer_contact">
                     <div class="footer_title">Contact Us</div>
                     <div class="footer_contact_info">
@@ -84,6 +81,22 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 footer_col text-center">
+                <div class="footer_about">
+                    <!-- <div class="footer_title">Social Media</div> -->
+                    <div class="footer_social">
+                        <ul>
+                            @foreach ($social as $data)
+                            <li><a href="{{$data->link}}"><i class="fa fa-{{$data->icon}}" aria-hidden="true"></i></a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>

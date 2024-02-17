@@ -8,12 +8,48 @@ use App\Models\News;
 use App\Models\Population;
 use App\Models\Result;
 use App\Models\User;
+use App\Models\Visitor;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesControler extends Controller
 {
-    function home()
+
+    function home(Request $request)
     {
+        $ip = $request->ip();
+        $visitor = Visitor::firstorCreate(['ipAddress' => $ip]);
+        $visitor->increment('visits');
+        $visitor->save();
+        // $visitors = Visitor::count();
+
+
+
+        $totalVisitors = DB::table('visitors')->count();
+
+        $currentWeekStart = Carbon::now()->startOfWeek();
+        $weeklyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentWeekStart)
+            ->count();
+
+        $currentMonthStart = Carbon::now()->startOfMonth();
+        $monthlyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentMonthStart)
+            ->count();
+
+        $currentDay = Carbon::now()->startOfDay();
+        $dailyVisitors = DB::table('visitors')
+            ->where('created_at', '>=', $currentDay)
+            ->count();
+
+        $data['totalVisitors'] = $totalVisitors;
+        $data['weeklyVisitors'] = $weeklyVisitors;
+        $data['monthlyVisitors'] = $monthlyVisitors;
+        $data['dailyVisitors'] = $dailyVisitors;
+
+
+
         $data['carousel'] = Carousel::latest()->get();
         $data['population'] = Population::latest()->take(1)->get();
         $data['news'] = News::latest()->take(5)->get();

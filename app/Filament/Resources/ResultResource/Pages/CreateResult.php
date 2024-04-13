@@ -39,7 +39,7 @@ class CreateResult extends CreateRecord
                     Select::make('formId')
                         ->live()
                         ->required()
-                        ->searchDebounce(500)
+                        ->searchDebounce(100)
                         ->preload()
                         ->label('Class Level')
                         ->loadingMessage('Loading Levels...')

@@ -37,7 +37,7 @@ class NetworkResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('name')
                                     ->required()
-                                    ->live(debounce: '600s')
+                                    ->live(debounce: 10000)
                                     ->helperText('Enter The Correct name of the social network you want to add')
                                     ->maxLength(20)
                                     ->afterStateUpdated(fn (callable $set, ?string $state) => $set('icon', Str::slug($state))),
